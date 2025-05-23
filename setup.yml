@@ -1,0 +1,11 @@
+---
+- name: Basic Server Setup
+  hosts: local
+  become: false
+
+  tasks:
+    - name: copy the artifact to the deployment directory
+      copy: 
+         src: "/var/lib/jenkins/workspace/lab8/"
+         dest: "sudo /home/csd"
+      
